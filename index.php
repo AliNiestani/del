@@ -1,7 +1,7 @@
 <?php
 ob_start();
-define('API_KEY','token');
-$admin = "238773538";
+define('API_KEY','261702370:AAEqjOoy-R2p6jHQ2yEcSg9lpn2kAxdbGC0');
+$admin = "105616381";
 function bot($method,$datas=[]){
     $url = "https://api.telegram.org/bot".API_KEY."/".$method;
     $ch = curl_init();
@@ -43,7 +43,7 @@ if (isset($update->edited_message)){
   //$up = file_get_contents(__DIR__.'/users/'.$eid.'.json');
   //str_replace("edited_message","message",$up);
 }elseif(preg_match('/^\/([Ss]tart)/',$text1)){
-  $text = "سلام ، به ربات ادیت نکن خوش اومدی شما میتونید منو داخل گروه ادد کنید تا پیام هایی که ادیت میشه پاک کنم!\nاین سورس توسط @MuteTeam اوپن شده است .\nhttps://telegram.me/idrobotshoma?startgroup=new";
+  $text = "سلام ، به ربات ادیت نکن خوش اومدی شما میتونید منو داخل گروه ادد کنید تا پیام هایی که ادیت میشه پاک کنم!\nhttps://telegram.me/Dont_EditBot?startgroup=new";   
   bot('sendmessage',[
     'chat_id'=>$chat_id,
     'text'=>$text,
@@ -51,10 +51,10 @@ if (isset($update->edited_message)){
     'reply_markup'=>json_encode([
       'inline_keyboard'=>[
         [
-          ['text'=>'MutePuker','url'=>'https://telegram.me/MutePuker']
+          ['text'=>'Ali Niestani','url'=>'https://telegram.me/Ali_Niestani']
         ],
         [
-          ['text'=>'MuteTeam','url'=>'https://telegram.me/MuteTeam']
+          ['text'=>'PROBOT','url'=>'https://telegram.me/PROB0T']
         ]
       ]
     ])
