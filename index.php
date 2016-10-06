@@ -73,17 +73,3 @@ bot('sendMessage',[
       'text'=>"به گروه خوش آمدید "
     ]);
 }
-  
-  
-  
-  
-  
-  
-  
-$txxt = file_get_contents('member.txt');
-    $pmembersid= explode("\n",$txxt);
-    if (!in_array($chat_id,$pmembersid)){
-      $aaddd = file_get_contents('member.txt');
-      $aaddd .= $chat_id."\n";
-      file_put_contents('member.txt',$aaddd);
-    }
