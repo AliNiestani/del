@@ -16,16 +16,15 @@ function bot($method,$datas=[]){
     }
 }
 $up = json_decode(file_get_contents('php://input'),true);//get updates from webhook
+$update = json_decode(file_get_contents('php://input'));
 //file_put_contents('a.txt',json_encode($up));//save update in a.txt file
 $msg = $up['message'];//get update type message
 $message = $up['message'];//get update type message
 $callback = $up['callback_query'];//get update type callback_query
 $inline = $up['inline_query'];//get update type inline_query
-
-$update = json_decode(file_get_contents('php://input'));
 $message = $update->message;
 $chat_id = $message->chat->id;
-$text1 = $message->text;
+
 if( $update->message->text == '/start'){
   $text = "ربات سایت طلاتم\nجهت دسترسی سریع تر به مطالب سایت";
   bot('sendmessage',[
