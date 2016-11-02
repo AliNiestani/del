@@ -22,27 +22,11 @@ $message = $up['message'];//get update type message
 $callback = $up['callback_query'];//get update type callback_query
 $inline = $up['inline_query'];//get update type inline_query
 
-
 $update = json_decode(file_get_contents('php://input'));
 $message = $update->message;
-$editm = $update->edited_message;
-$mid = $message->message_id;
 $chat_id = $message->chat->id;
 $text1 = $message->text;
-$fadmin = $message->from->id;
-if (isset($update->edited_message)){
-  //$chat_id1 = $editm->chat->id;
-  $eid = $editm->message_id;
-  $edname = $editm->from->id;
-  $text = $edname;
-  $id = $update->edited_message->chat->id;
-  bot('sendmessage',[
-    'chat_id'=>$id,
-    'reply_to_message_id'=>$eid,
-    'text'=>$text,
-    'parse_mode'=>'html'
-  ]);
-}elseif( $update->message->text == '/start'){
+if( $update->message->text == '/start'){
   $text = "ربات سایت طلاتم\nجهت دسترسی سریع تر به مطالب سایت";
   bot('sendmessage',[
     'chat_id'=>$chat_id,
