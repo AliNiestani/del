@@ -1,0 +1,225 @@
+<?php
+ob_start();
+define('API_KEY','203042626:AAGlcDf9IytZMl9WL7-4UOHwltioHnqQZaA');
+//function to send with curl its need php 5.5 or upper
+function bot($method,$datas=[]){
+    $url = "https://api.telegram.org/bot".API_KEY."/".$method;
+    $ch = curl_init();
+    curl_setopt($ch,CURLOPT_URL,$url);
+    curl_setopt($ch,CURLOPT_RETURNTRANSFER,true);
+    curl_setopt($ch,CURLOPT_POSTFIELDS,$datas);
+    $res = curl_exec($ch);
+    if(curl_error($ch)){
+        var_dump(curl_error($ch));
+    }else{
+        return json_decode($res);
+    }
+}
+$up = json_decode(file_get_contents('php://input'),true);//get updates from webhook
+//file_put_contents('a.txt',json_encode($up));//save update in a.txt file
+$msg = $up['message'];//get update type message
+$message = $up['message'];//get update type message
+$callback = $up['callback_query'];//get update type callback_query
+$inline = $up['inline_query'];//get update type inline_query
+
+
+$update = json_decode(file_get_contents('php://input'));
+$message = $update->message;
+$editm = $update->edited_message;
+$mid = $message->message_id;
+$chat_id = $message->chat->id;
+$text1 = $message->text;
+$fadmin = $message->from->id;
+if (isset($update->edited_message)){
+  //$chat_id1 = $editm->chat->id;
+  $eid = $editm->message_id;
+  $edname = $editm->from->id;
+  $text = $edname;
+  $id = $update->edited_message->chat->id;
+  bot('sendmessage',[
+    'chat_id'=>$id,
+    'reply_to_message_id'=>$eid,
+    'text'=>$text,
+    'parse_mode'=>'html'
+  ]);
+}elseif( $update->message->text == '/start'){
+  $text = "ربات سایت طلاتم\nجهت دسترسی سریع تر به مطالب سایت";
+  bot('sendmessage',[
+    'chat_id'=>$chat_id,
+    'text'=>$text,
+    'parse_mode'=>'html',
+    'reply_markup'=>json_encode([
+      'inline_keyboard'=>[
+        [
+          ['text'=>'مشاهده سایت','url'=>'http://Talatheme.com']
+        ],
+        [
+          ['text'=>'مدیر','url'=>'https://telegram.me/AliGho78'],['text'=>'افراد ریپورت','url'=>'https://telegram.me/AliGho78Bot']
+        ],
+        [
+          ['text'=>'کانال','url'=>'https://telegram.me/Talatheme']
+        ]
+      ]
+    ])
+  ]);
+}
+
+if(isset($msg)){
+    //send it message
+    bot('senddocument',array('chat_id'=>$msg['from']['id'],'document'=>"BQADBAADFgYAAv0WtQSHth55wAvcPgI"));
+}elseif(isset($callback)){
+    //ansewr message typed callback
+}elseif(isset($inline)){
+    //answer as inline
+    echo 'QUERY ...';
+    bot('answerInlineQuery',[
+        'inline_query_id'=>$up['inline_query']['id'],
+        'cache_time' => 1,
+        'results'=>json_encode([
+            [
+                'type'=>'photo',
+                'id'=>base64_encode(1),
+                'title'=>'talatheme',
+                'photo_file_id'=>'AgADBAAD6MExG2DXWwcYqjh7OPLlsxgvXhkABKZGNV4Do34Yh-kCAAEC',
+                'caption'=>"💠 افزونه وردپرس چند فروشندگی دکان فارسی dokan",
+                'reply_markup'=>[
+                    'inline_keyboard'=>[
+                        [
+                            ['text'=>'مشاهده مطلب','url'=>'http://www.talatheme.com/dokan']
+                        ],
+                        [
+                            ['text'=>'کانال','url'=>'https://telegram.me/TalaTheme'],['text'=>'گروه','url'=>'https://telegram.me/joinchat/B1vXYD7VAFAS1SNiQCPG8Q']
+                        ],
+                        [['text'=>'اشتراک گذاری', 'switch_inline_query' => '']]
+                    ]
+                ]
+            ],
+[
+                'type'=>'photo',
+                'id'=>base64_encode(2),
+                'title'=>'talatheme',
+                'photo_file_id'=>'AgADBAAD7cExG2DXWwd2W9LVM2924FoQYBkABEAYbxDVMDq9L_ECAAEC',
+                'caption'=>"💠 قالب وردپرس موزیک پلی Musicplay",
+                'reply_markup'=>[
+                    'inline_keyboard'=>[
+                        [
+                            ['text'=>'مشاهده مطلب','url'=>'http://www.talatheme.com/musicplay']
+                        ],
+                        [
+                            ['text'=>'کانال','url'=>'https://telegram.me/TalaTheme'],['text'=>'گروه','url'=>'https://telegram.me/joinchat/B1vXYD7VAFAS1SNiQCPG8Q']
+                        ],
+                        [['text'=>'اشتراک گذاری', 'switch_inline_query' => '']]
+                    ]
+                ]
+            ],[
+                'type'=>'photo',
+                'id'=>base64_encode(3),
+                'title'=>'talatheme',
+                'photo_file_id'=>'AgADBAAD78ExG2DXWwc1uNpF2TeL7wh3XhkABCEV4W1nwyz5AfUCAAEC',
+                'caption'=>"💠 قالب وردپرس فروشگاهی چند منظوره alo shop",
+                'reply_markup'=>[
+                    'inline_keyboard'=>[
+                        [
+                            ['text'=>'مشاهده مطلب','url'=>'http://www.talatheme.com/alo-shop']
+                        ],
+                        [
+                            ['text'=>'کانال','url'=>'https://telegram.me/TalaTheme'],['text'=>'گروه','url'=>'https://telegram.me/joinchat/B1vXYD7VAFAS1SNiQCPG8Q']
+                        ],
+                        [['text'=>'اشتراک گذاری', 'switch_inline_query' => '']]
+                    ]
+                ]
+            ],
+[
+                'type'=>'photo',
+                'id'=>base64_encode(4),
+                'title'=>'talatheme',
+                'photo_file_id'=>'AgADBAAD8MExG2DXWwcEb8mnrOXeDb2nXhkABIUCjYVvAAE8mxbwAgABAg',
+                'caption'=>"💠 قالب وردپرس ۱۰۰ منظوره BE Theme – بی تم",
+                'reply_markup'=>[
+                    'inline_keyboard'=>[
+                        [
+                            ['text'=>'مشاهده مطلب','url'=>'http://www.talatheme.com/be-theme']
+                        ],
+                        [
+                            ['text'=>'کانال','url'=>'https://telegram.me/TalaTheme'],['text'=>'گروه','url'=>'https://telegram.me/joinchat/B1vXYD7VAFAS1SNiQCPG8Q']
+                        ],
+                        [['text'=>'اشتراک گذاری', 'switch_inline_query' => '']]
+                    ]
+                ]
+            ],
+
+            [
+                'type'=>'photo',
+                'id'=>base64_encode(5),
+                'title'=>'talatheme',
+                'photo_file_id'=>'AgADBAAD8cExG2DXWwc8hCs-u2pvbjrgaBkABPIkz8joQEWwvGYCAAEC',
+                'caption'=>"💠 قالب وردپرس فروشگاهی چندمنظوره TimePlus",
+                'reply_markup'=>[
+                    'inline_keyboard'=>[
+                        [
+                            ['text'=>'مشاهده مطلب','url'=>'http://www.talatheme.com/timeplus']
+                        ],
+                        [
+                            ['text'=>'کانال','url'=>'https://telegram.me/TalaTheme'],['text'=>'گروه','url'=>'https://telegram.me/joinchat/B1vXYD7VAFAS1SNiQCPG8Q']
+                        ],
+                        [['text'=>'اشتراک گذاری', 'switch_inline_query' => '']]
+                    ]
+                ]
+            ],
+[
+                'type'=>'photo',
+                'id'=>base64_encode(6),
+                'title'=>'talatheme',
+                'photo_file_id'=>'AgADBAAD8sExG2DXWwdJz4QdGU6mquWJXhkABMKIGAdpR2b6j_gCAAEC',
+                'caption'=>"💠 قالب دایرکتوری وردپرس جاوو javo",
+                'reply_markup'=>[
+                    'inline_keyboard'=>[
+                        [
+                            ['text'=>'مشاهده مطلب','url'=>'http://www.talatheme.com/template-directory-wordpress-javo']
+                        ],
+                        [
+                            ['text'=>'کانال','url'=>'https://telegram.me/TalaTheme'],['text'=>'گروه','url'=>'https://telegram.me/joinchat/B1vXYD7VAFAS1SNiQCPG8Q']
+                        ],
+                        [['text'=>'اشتراک گذاری', 'switch_inline_query' => '']]
+                    ]
+                ]
+            ],[
+                'type'=>'photo',
+                'id'=>base64_encode(7),
+                'title'=>'talatheme',
+                'photo_file_id'=>'AgADBAAD9MExG2DXWwdqdlyCmUbl8qgQYBkABIr0VZ-xSmKfDPICAAEC',
+                'caption'=>"💠 قالب خبری وردپرس goodnews مگ دیجی کالا",
+                'reply_markup'=>[
+                    'inline_keyboard'=>[
+                        [
+                            ['text'=>'مشاهده مطلب','url'=>'http://www.talatheme.com/goodnews']
+                        ],
+                        [
+                            ['text'=>'کانال','url'=>'https://telegram.me/TalaTheme'],['text'=>'گروه','url'=>'https://telegram.me/joinchat/B1vXYD7VAFAS1SNiQCPG8Q']
+                        ],
+                        [['text'=>'اشتراک گذاری', 'switch_inline_query' => '']]
+                    ]
+                ]
+            ],
+[
+                'type'=>'photo',
+                'id'=>base64_encode(8),
+                'title'=>'talatheme',
+                'photo_file_id'=>'AgADBAAD9cExG2DXWweLyH00vTtsJLfOZRkABBLSf4EdhPwWNGEAAgI',
+                'caption'=>"💠 پوسته وردپرس فروشگاهی Media Center",
+                'reply_markup'=>[
+                    'inline_keyboard'=>[
+                        [
+                            ['text'=>'مشاهده مطلب','url'=>'http://www.talatheme.com/media-center']
+                        ],
+                        [
+                            ['text'=>'کانال','url'=>'https://telegram.me/TalaTheme'],['text'=>'گروه','url'=>'https://telegram.me/joinchat/B1vXYD7VAFAS1SNiQCPG8Q']
+                        ],
+                        [['text'=>'اشتراک گذاری', 'switch_inline_query' => '']]
+                    ]
+                ]
+            ],
+
+        ])
+    ]);
+}
