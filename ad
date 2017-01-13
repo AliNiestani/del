@@ -1,0 +1,22 @@
+
+nil
+(table)
+  members_ = (table)
+    1 = (table)
+      inviter_user_id_ = 172519890,
+      status_ = (table)
+        ID = "ChatMemberStatusEditor",
+      join_date_ = 1482961121,
+      bot_info_ = false,
+      ID = "ChatMember",
+      user_id_ = 105616381,
+    0 = (table)
+      inviter_user_id_ = 0,
+      status_ = (table)
+        ID = "ChatMemberStatusCreator",
+      join_date_ = 0,
+      bot_info_ = false,
+      ID = "ChatMember",
+      user_id_ = 172519890,
+  ID = "ChatMembers",
+  total_count_ = 2,
