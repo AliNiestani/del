@@ -1,0 +1,94 @@
+nil
+(table)
+  id_ = "3711959040",
+  content_ = (table)
+    photo_ = (table)
+      id_ = "5794178820000032834",
+      sizes_ = (table)
+        1 = (table)
+          photo_ = (table)
+            id_ = 36,
+            persistent_id_ = "AgADBAADQqgxG_AOaVAWbYmUchJPCkyNZBkABJAPHjHFZEbhxX4CAAEC",
+            ID = "File",
+            size_ = 14154,
+            path_ = false,
+          height_ = 235,
+          ID = "PhotoSize",
+          width_ = 320,
+          type_ = "m",
+        2 = (table)
+          photo_ = (table)
+            id_ = 37,
+            persistent_id_ = "AgADBAADQqgxG_AOaVAWbYmUchJPCkyNZBkABHfNdimlUGVSxn4CAAEC",
+            ID = "File",
+            size_ = 52410,
+            path_ = false,
+          height_ = 588,
+          ID = "PhotoSize",
+          width_ = 800,
+          type_ = "x",
+        3 = (table)
+          photo_ = (table)
+            id_ = 38,
+            persistent_id_ = "AgADBAADQqgxG_AOaVAWbYmUchJPCkyNZBkABPrfh0vu44QZw34CAAEC",
+            ID = "File",
+            size_ = 67739,
+            path_ = false,
+          height_ = 793,
+          ID = "PhotoSize",
+          width_ = 1079,
+          type_ = "y",
+        0 = (table)
+          photo_ = (table)
+            id_ = 35,
+            persistent_id_ = "AgADBAADQqgxG_AOaVAWbYmUchJPCkyNZBkABFqJL9k6yuA9xH4CAAEC",
+            ID = "File",
+            size_ = 966,
+            path_ = false,
+          height_ = 66,
+          ID = "PhotoSize",
+          width_ = 90,
+          type_ = "s",
+      has_stickers_ = false,
+      ID = "Photo",
+    caption_ = false,
+    ID = "MessagePhoto",
+  ID = "Message",
+  can_be_deleted_ = true,
+  sender_user_id_ = 105616381,
+  edit_date_ = 0,
+  is_post_ = false,
+  reply_to_message_id_ = 0,
+  ttl_expires_in_ = 0,
+  forward_info_ = false,
+  chat_id_ = "-1001072354483",
+  date_ = 1485992394,
+  ttl_ = 0,
+  can_be_edited_ = false,
+  reply_markup_ = false,
+  views_ = 0,
+  via_bot_user_id_ = 0,
+  send_state_ = (table)
+    ID = "MessageIsIncoming",
+
+
+(table)
+  ready_ = 131072,
+  file_id_ = 1046,
+  size_ = 156477,
+  ID = "UpdateFileProgress",
+(table)
+  ready_ = 156477,
+  file_id_ = 1046,
+  size_ = 156477,
+  ID = "UpdateFileProgress",
+(table)
+  file_ = (table)
+    id_ = 1046,
+    ID = "File",
+    path_ = "/home/test/.telegram-cli/data/document/PhotoFunia-1478754768.jpg",
+    size_ = 156477,
+    persistent_id_ = "BQADBAADYwADEXiRUIur66NV64cAAQI",
+  ID = "UpdateFile",
+[Ready] 0>
+
