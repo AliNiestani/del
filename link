@@ -1,0 +1,24 @@
+(table)
+  member_count_ = 0,
+  photo_ = (table)
+    ID = "ChatPhoto",
+    small_ = (table)
+      size_ = 0,
+      ID = "File",
+      persistent_id_ = "AQADAQATWAToLwAEG4NYONyh8lBSxwACAg",
+      id_ = 1,
+      path_ = false,
+    big_ = (table)
+      size_ = 0,
+      ID = "File",
+      persistent_id_ = "AQADAQATWAToLwAEKHawm48NsmNUxwACAg",
+      id_ = 2,
+      path_ = false,
+  ID = "ChatInviteLinkInfo",
+  is_channel_ = true,
+  is_supergroup_channel_ = true,
+  is_group_ = false,
+  members_ = (table)
+  chat_id_ = "-1001052673654",
+  is_public_channel_ = false,
+  title_ = "PROBOT Support | ع�ظ�ظ��ظ�ظ�ع� ع�ظ�عظ�ظ�ظ�",
