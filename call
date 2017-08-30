@@ -1,0 +1,198 @@
+{"_":"updateCall","call":{"_":"call","id":2,"user_id":105616381,"is_outgoing":false,"state":{"_":"callStateDiscarded","reason":{"_":"callDiscardReasonMissed"},"need_rating":false,"need_debug":false}}}
+(table)
+  _ = "updateCall",
+  call = (table)
+    _ = "call",
+    is_outgoing = false,
+    id = 2,
+    state = (table)
+      _ = "callStateDiscarded",
+      reason = (table)
+        _ = "callDiscardReasonMissed",
+      need_rating = false,
+      need_debug = false,
+    user_id = 105616381,
+{"_":"updateChatReadInbox","chat_id":105616381,"last_read_inbox_message_id":0,"unread_count":4}
+(table)
+  _ = "updateChatReadInbox",
+  chat_id = 105616381,
+  last_read_inbox_message_id = 0,
+  unread_count = 4,
+{"_":"updateNewMessage","message":{"_":"message","id":143654912,"sender_user_id":105616381,"chat_id":105616381,"send_state":{"_":"messageIsIncoming"},"can_be_edited":false,"can_be_forwarded":false,"can_be_deleted_only_for_self":true,"can_be_deleted_for_everyone":false,"is_post":false,"date":1504081930,"edit_date":0,"reply_to_message_id":0,"ttl":0,"ttl_expires_in":0.000000,"via_bot_user_id":0,"author_signature":"","views":0,"content":{"_":"messageCall","discard_reason":{"_":"callDiscardReasonMissed"},"duration":0}},"disable_notification":true,"contains_mention":false}
+(table)
+  _ = "updateNewMessage",
+  message = (table)
+    _ = "message",
+    views = 0,
+    can_be_edited = false,
+    can_be_forwarded = false,
+    ttl = 0,
+    can_be_deleted_only_for_self = true,
+    is_post = false,
+    content = (table)
+      _ = "messageCall",
+      discard_reason = (table)
+        _ = "callDiscardReasonMissed",
+      duration = 0,
+    date = 1504081930,
+    via_bot_user_id = 0,
+    edit_date = 0,
+    send_state = (table)
+      _ = "messageIsIncoming",
+    ttl_expires_in = 0,
+    reply_to_message_id = 0,
+    id = 143654912,
+    author_signature = "",
+    chat_id = 105616381,
+    can_be_deleted_for_everyone = false,
+    sender_user_id = 105616381,
+  contains_mention = false,
+  disable_notification = true,
+(table)
+  _ = "message",
+  views = 0,
+  can_be_edited = false,
+  can_be_forwarded = false,
+  ttl = 0,
+  can_be_deleted_only_for_self = true,
+  is_post = false,
+  content = (table)
+    _ = "messageCall",
+    discard_reason = (table)
+      _ = "callDiscardReasonMissed",
+    duration = 0,
+  date = 1504081930,
+  via_bot_user_id = 0,
+  edit_date = 0,
+  send_state = (table)
+    _ = "messageIsIncoming",
+  ttl_expires_in = 0,
+  reply_to_message_id = 0,
+  id = 143654912,
+  author_signature = "",
+  chat_id = 105616381,
+  can_be_deleted_for_everyone = false,
+  sender_user_id = 105616381,
+{"_":"updateChatTopMessage","chat_id":105616381,"top_message":{"_":"message","id":143654912,"sender_user_id":105616381,"chat_id":105616381,"send_state":{"_":"messageIsIncoming"},"can_be_edited":false,"can_be_forwarded":false,"can_be_deleted_only_for_self":true,"can_be_deleted_for_everyone":false,"is_post":false,"date":1504081930,"edit_date":0,"reply_to_message_id":0,"ttl":0,"ttl_expires_in":0.000000,"via_bot_user_id":0,"author_signature":"","views":0,"content":{"_":"messageCall","discard_reason":{"_":"callDiscardReasonMissed"},"duration":0}},"order":0}
+(table)
+  _ = "updateChatTopMessage",
+  chat_id = 105616381,
+  top_message = (table)
+    _ = "message",
+    views = 0,
+    can_be_edited = false,
+    can_be_forwarded = false,
+    ttl = 0,
+    can_be_deleted_only_for_self = true,
+    is_post = false,
+    content = (table)
+      _ = "messageCall",
+      discard_reason = (table)
+        _ = "callDiscardReasonMissed",
+      duration = 0,
+    date = 1504081930,
+    via_bot_user_id = 0,
+    edit_date = 0,
+    send_state = (table)
+      _ = "messageIsIncoming",
+    ttl_expires_in = 0,
+    reply_to_message_id = 0,
+    id = 143654912,
+    author_signature = "",
+    chat_id = 105616381,
+    can_be_deleted_for_everyone = false,
+    sender_user_id = 105616381,
+  order = 0,
+
+--------------------------
+
+
+{"_":"updateChatReadInbox","chat_id":-1001061925786,"last_read_inbox_message_id":3601858560,"unread_count":4}
+(table)
+  chat_id = "-1001061925786",
+  _ = "updateChatReadInbox",
+  unread_count = 4,
+  last_read_inbox_message_id = "3601858560",
+{"_":"updateNewMessage","message":{"_":"message","id":3606052864,"sender_user_id":105616381,"chat_id":-1001061925786,"send_state":{"_":"messageIsIncoming"},"can_be_edited":false,"can_be_forwarded":true,"can_be_deleted_only_for_self":false,"can_be_deleted_for_everyone":false,"is_post":false,"date":1504082661,"edit_date":0,"reply_to_message_id":0,"ttl":0,"ttl_expires_in":0.000000,"via_bot_user_id":0,"author_signature":"","views":0,"content":{"_":"messageText","text":"O","entities":[]}},"disable_notification":true,"contains_mention":false}
+(table)
+  disable_notification = true,
+  _ = "updateNewMessage",
+  contains_mention = false,
+  message = (table)
+    edit_date = 0,
+    content = (table)
+      entities = (table)
+      _ = "messageText",
+      text = "O",
+    can_be_forwarded = true,
+    via_bot_user_id = 0,
+    can_be_deleted_for_everyone = false,
+    id = "3606052864",
+    can_be_edited = false,
+    reply_to_message_id = 0,
+    send_state = (table)
+      _ = "messageIsIncoming",
+    views = 0,
+    ttl_expires_in = 0,
+    is_post = false,
+    ttl = 0,
+    can_be_deleted_only_for_self = false,
+    sender_user_id = 105616381,
+    author_signature = "",
+    _ = "message",
+    date = 1504082661,
+    chat_id = "-1001061925786",
+(table)
+  edit_date = 0,
+  content = (table)
+    entities = (table)
+    _ = "messageText",
+    text = "O",
+  can_be_forwarded = true,
+  via_bot_user_id = 0,
+  can_be_deleted_for_everyone = false,
+  id = "3606052864",
+  can_be_edited = false,
+  reply_to_message_id = 0,
+  send_state = (table)
+    _ = "messageIsIncoming",
+  views = 0,
+  ttl_expires_in = 0,
+  is_post = false,
+  ttl = 0,
+  can_be_deleted_only_for_self = false,
+  sender_user_id = 105616381,
+  author_signature = "",
+  _ = "message",
+  date = 1504082661,
+  chat_id = "-1001061925786",
+{"_":"updateChatTopMessage","chat_id":-1001061925786,"top_message":{"_":"message","id":3606052864,"sender_user_id":105616381,"chat_id":-1001061925786,"send_state":{"_":"messageIsIncoming"},"can_be_edited":false,"can_be_forwarded":true,"can_be_deleted_only_for_self":false,"can_be_deleted_for_everyone":false,"is_post":false,"date":1504082661,"edit_date":0,"reply_to_message_id":0,"ttl":0,"ttl_expires_in":0.000000,"via_bot_user_id":0,"author_signature":"","views":0,"content":{"_":"messageText","text":"O","entities":[]}},"order":0}
+(table)
+  chat_id = "-1001061925786",
+  _ = "updateChatTopMessage",
+  top_message = (table)
+    edit_date = 0,
+    content = (table)
+      entities = (table)
+      _ = "messageText",
+      text = "O",
+    can_be_forwarded = true,
+    via_bot_user_id = 0,
+    can_be_deleted_for_everyone = false,
+    id = "3606052864",
+    can_be_edited = false,
+    reply_to_message_id = 0,
+    send_state = (table)
+      _ = "messageIsIncoming",
+    views = 0,
+    ttl_expires_in = 0,
+    is_post = false,
+    ttl = 0,
+    can_be_deleted_only_for_self = false,
+    sender_user_id = 105616381,
+    author_signature = "",
+    _ = "message",
+    date = 1504082661,
+    chat_id = "-1001061925786",
+  order = 0,
+
